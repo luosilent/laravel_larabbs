@@ -51,13 +51,13 @@ class TopicsController extends Controller
 	{
 		$this->authorize('update', $topic);
 		$topic->update($request->all());
-		return redirect()->to($topic->link())->with('success', '成功更新话题！');
+		return redirect()->route('topics.show', $topic->id)->with('success', '更新成功！');
 	}
 	public function destroy(Topic $topic)
 	{
 		$this->authorize('destroy', $topic);
 		$topic->delete();
-		return redirect()->to($topic->link())->with('success', '成功删除话题！');
+		return redirect()->route('topics.index')->with('success', '成功删除！');
 	}
 	public function uploadImage(Request $request, ImageUploadHandler $uploader)
     {
