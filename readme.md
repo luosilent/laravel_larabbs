@@ -1,5 +1,7 @@
 # laravel+bbs论坛项目
 
+## 学习地址https://laravel-china.org/courses/laravel-intermediate-training-5.5
+
 ## 功能如下
 
 ### 分三部分
